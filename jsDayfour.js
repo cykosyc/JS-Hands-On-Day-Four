@@ -15,22 +15,13 @@ Timely Submission: 25% of your grade will be based on having a complete solution
 Style: 25% of your grade will be based on having legible, and well-designed code.
 */
 
-// function alpha(a) {
-//   for (var i = a; a < 20; i++){
-//     console.log(i);
-//   }
-// }
-// alpha(1);
-//
-
-for (var i = 1, t = 1; i < 21; i++){
-  console.log(i);
+function alpha(a) {
+  var values = [1, 2]
+  for (var i = 0; i < a; i++){
+    var lastValue = values[values.length - 1]
+    var secondToLastValue = values[values.length - 2]
+    values.push(lastValue + secondToLastValue);
+  }
+  return values
 }
-
-// var numbers = [1, 2]
-// for (var i = 0; i < numbers.length; i++){
-//   if (numbers.length != 20){
-//     numbers.push (20) + 2;
-//   }
-//   console.log(i+1);
-// }
+console.log(alpha(20));
